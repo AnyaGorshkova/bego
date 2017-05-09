@@ -1,0 +1,95 @@
+extends ../_template
+
+block variables
+  - var title = 'Home page'
+
+block content
+  div.page
+    nav.main-nav
+      div.main-nav__logo
+        span BeG
+        span o
+      ul.main-nav__list
+        li.main-nav__item
+          a.main-nav__link(href = "#") Портфолио
+        li.main-nav__item
+          a.main-nav__link(href = "#") Услуги
+        li.main-nav__item
+          a.main-nav__link(href = "#") Контакты
+        li.main-nav__item
+          a.main-nav__link(href = "#") О нас
+    header.main-header
+      div.main-header__bg
+        include ../../images/spb.svg
+    
+
+    section.section.section-services
+      div.section__bg
+        div.homepage-hero-module
+          div.video-container
+            div.filter
+            video(autoplay loop).fillWidth
+              source(src="assets/img/video/Black_Keys.mp4" type="video/mp4")
+              source(src="assets/img/video/Black_Keys.webm" type="video/webm")
+            div.poster.hidden
+              img(src="assets/img/video/Black_Keys.jpeg" alt="")
+      div.section__content
+        div.section__title Что мы делаем
+        div.section__description  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia molestias quo, ut eos quasi. At nobis asperiores laborum consequatur nihil harum accusamus nulla sed perferendis ratione eos, labore qui maxime.
+        ul.section-services__list
+          li.section-services__item
+            div.section-services__img
+              include ../../images/site.svg 
+            div.section-services__name Landing Page
+          li.section-services__item
+            div.section-services__img
+              include ../../images/site.svg 
+            div.section-services__name Интернет-магазин
+          li.section-services__item
+            div.section-services__img
+              include ../../images/site.svg 
+            div.section-services__name Сайт-портфолио
+          li.section-services__item
+            div.section-services__img
+              include ../../images/site.svg 
+            div.section-services__name Корпоративый сайт
+          li.section-services__item
+            div.section-services__img
+              include ../../images/site.svg 
+            div.section-services__name Сайт каталог
+          li.section-services__item
+            div.section-services__img
+              include ../../images/site.svg 
+            div.section-services__name SEO
+          li.section-services__item
+            div.section-services__img
+              include ../../images/site.svg 
+            div.section-services__name Сопровождение
+    section.section.section-steps
+      div.section__bg
+
+      div.section__content.section__content--gray
+        div.section__title Этапы сотрудничества
+        div.section__description  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia molestias quo, ut eos quasi. At nobis asperiores laborum consequatur nihil harum accusamus nulla sed perferendis ratione eos, labore qui maxime.
+        ul.section-steps__list
+          li.section-steps__item
+            div.section-steps__number
+              span 01
+            div.section-steps__title Определение целей сайта
+          li.section-steps__item
+            div.section-steps__number
+              span 02
+            div.section-steps__title Создание технического задания
+          li.section-steps__item
+            div.section-steps__number
+              span 03
+            div.section-steps__title Создание макета сайта
+          li.section-steps__item
+            div.section-steps__number
+              span 04
+            div.section-steps__title Создание макета сайта
+          li.section-steps__item
+            div.section-steps__number
+              span 05
+            div.section-steps__title Создание макета сайта
+
