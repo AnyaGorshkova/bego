@@ -24,7 +24,24 @@
   </head>
   <body>
     <div class="page">
-      <!--div.order-->
+      <div class="order"><i class="fa fa-pencil" aria-hidden="true"></i></div>
+      <div class="form-order">
+        <div class="form-order__close"><i class="fa fa-times" aria-hidden="true"></i></div>
+        <div class="form-order__title">У вас есть интересный проект?</div>
+        <form>
+          <select nmae="project" title="Я хочу заказать...">
+            <option value="landing">Просто сайт</option>
+            <option value="shop">Интернет-магазин</option>
+            <option value="help">Помогите с выбором</option>
+          </select>
+          <label for="type-project"></label>
+          <input type="text" id="type-project" name="textfield" placeholder="Ваше имя">
+          <label for="type-project"></label>
+          <input type="text" id="type-project" name="textfield" placeholder="Номер телефона">
+          <textarea class="form-order__descr" placeholder="Опишите Вашу идею"></textarea>
+          <input class="form-order__submit" type="submit" value="Отправить">
+        </form>
+      </div>
       <nav class="main-nav">
         <div class="main-nav__logo"><span>BeG</span><span>o</span></div>
         <ul class="main-nav__list">
@@ -244,7 +261,56 @@
           </script>
           <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5Ncosm7KrFjC4N1yWHqTKavjJu4Jucr4&amp;callback=initMap"></script>
         </div>
-        <div class="section-contact__info">Информация о BeGo</div>
+        <div class="section-contact__info">
+          <div class="section-contact__left">
+            <div class="clock">
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="hours-hand"></div>
+              <div class="minutes-hand"></div>
+              <div class="seconds-hand"></div>
+            </div>
+            <div class="section-contact__contacts">
+              <p>Санкт-Петребург</p>
+              <p>begodevelopment@gmail.com</p>
+              <p>+7 999 999 9999</p>
+            </div>
+          </div>
+          <div class="section-contact__right">
+            <div class="clock">
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="marks"></div>
+              <div class="hours-hand"></div>
+              <div class="minutes-hand"></div>
+              <div class="seconds-hand"></div>
+            </div>
+            <div class="section-contact__contacts">
+              <p>Красноярск</p>
+              <p>begodevelopment@gmail.com</p>
+              <p>+7 999 999 9999</p>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </body>
