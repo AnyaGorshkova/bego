@@ -464,192 +464,213 @@
       <section class="section section-contacts">
         <div class="section-contacts__map">
           <div id="map"></div>
-          <script>
-            var map;
-            function initMap() {
-            var styles = [
-            {
-            "featureType": "all",
-             "elementType": "labels.text.fill",
-              "stylers": [
-            {
-                 "saturation": 36
-             },
-            {
-                 "color": "#000000"
-             },
-             {
-                 "lightness": 40
-             }
-            ]
+          <script>var map;
+var markers =[];
+          function initMap() {
+           var styles = [
+          {
+           "featureType": "all",
+            "elementType": "labels.text.fill",
+             "stylers": [
+           {
+                "saturation": 36
             },
-            {
-            "featureType": "all",
-            "elementType": "labels.text.stroke",
-            "stylers": [
-            {
-                 "visibility": "on"
-             },
-             {
+           {
                 "color": "#000000"
             },
-             {
-                 "lightness": 16
-             }
-            ]
-            },
             {
-            "featureType": "all",
-            "elementType": "labels.icon",
-            "stylers": [
-            {
-                "visibility": "off"
+                "lightness": 40
             }
-            ]
+           ]
+           },
+          {
+           "featureType": "all",
+           "elementType": "labels.text.stroke",
+            "stylers": [
+           {
+                "visibility": "on"
             },
             {
-            "featureType": "administrative",
-            "elementType": "geometry.fill",
+               "color": "#000000"
+           },
+            {
+                "lightness": 16
+            }
+           ]
+          },
+          {
+          "featureType": "all",
+          "elementType": "labels.icon",
+           "stylers": [
+           {
+               "visibility": "off"
+           }
+           ]
+          },
+          {
+           "featureType": "administrative",
+           "elementType": "geometry.fill",
+           "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+               "lightness": 20
+            }
+           ]
+          },
+          {
+           "featureType": "administrative",
+          "elementType": "geometry.stroke",
+           "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 17
+            },
+            {
+                "weight": 1.2
+            }
+          ]
+          },
+          {
+            "featureType": "landscape",
+            "elementType": "geometry",
             "stylers": [
-             {
-                 "color": "#000000"
-             },
-             {
+            {
+                "color": "#000000"
+            },
+            {
                 "lightness": 20
-             }
-            ]
-            },
-            {
-            "featureType": "administrative",
-            "elementType": "geometry.stroke",
-            "stylers": [
-             {
-                 "color": "#000000"
-             },
-             {
-                 "lightness": 17
-             },
-             {
-                 "weight": 1.2
-             }
-            ]
-            },
-            {
-             "featureType": "landscape",
-             "elementType": "geometry",
-             "stylers": [
-             {
-                 "color": "#000000"
-             },
-             {
-                 "lightness": 20
-             }
-            ]
-            },
-            {
-              "featureType": "poi",
-               "elementType": "geometry",
-               "stylers": [
-             {
-                 "color": "#000000"
-             },
-             {
-                 "lightness": 21
-             }
-            ]
-            },
-            {
-              "featureType": "road.highway",
-              "elementType": "geometry.fill",
-                "stylers": [
-             {
-                 "color": "#000000"
-             },
-             {
-                 "lightness": 17
-             }
-                ]
-            },
-            {
-                "featureType": "road.highway",
-                "elementType": "geometry.stroke",
-                "stylers": [
-             {
-                 "color": "#000000"
-             },
-             {
-                 "lightness": 29
-             },
-             {
-                 "weight": 0.2
-             }
-                ]
-            },
-            {
-                    "featureType": "road.arterial",
-                    "elementType": "geometry",
-                    "stylers": [
-             {
-                 "color": "#000000"
-             },
-             {
-                 "lightness": 18
-             }
-                    ]
-                },
-                {
-                    "featureType": "road.local",
-                    "elementType": "geometry",
-                    "stylers": [
-             {
-                 "color": "#000000"
-             },
-             {
-                 "lightness": 16
-             }
-                    ]
-                },
-                {
-                    "featureType": "transit",
-                    "elementType": "geometry",
-                    "stylers": [
-             {
-                 "color": "#000000"
-             },
-             {
-                 "lightness": 19
-             }
-                    ]
-                },
-                {
-                    "featureType": "water",
-                    "elementType": "geometry",
-                    "stylers": [
-             {
-                 "color": "#000000"
-             },
-             {
-                 "lightness": 17
-             }
-                    ]
-                }
-            ]
-            map = new google.maps.Map(document.getElementById('map'), {
-            	center: {lat: 59.9342802, lng: 30.3350986},
-            	zoom: 11,
-            styles: styles,
-            disableDefaultUI: true
-            });
-            var BeGo = {lat: 59.9342802, lng: 30.3350986}
-            var marker = new google.maps.Marker({
-            	position: BeGo,
-            map: map,
-            title: 'We are here!'
-            });
             }
-            var infoWindow = new google.maps.InfoWindow({
-            content: 'Мы делаем сайты!'
-            });
+           ]
+           },
+           {
+             "featureType": "poi",
+              "elementType": "geometry",
+              "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 21
+            }
+           ]
+          },
+           {
+             "featureType": "road.highway",
+             "elementType": "geometry.fill",
+               "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 17
+            }
+               ]
+           },
+           {
+               "featureType": "road.highway",
+               "elementType": "geometry.stroke",
+               "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 29
+            },
+            {
+                "weight": 0.2
+            }
+               ]
+           },
+           {
+                   "featureType": "road.arterial",
+                   "elementType": "geometry",
+                   "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 18
+            }
+                   ]
+               },
+               {
+                   "featureType": "road.local",
+                   "elementType": "geometry",
+                   "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 16
+            }
+                   ]
+               },
+               {
+                   "featureType": "transit",
+                   "elementType": "geometry",
+                   "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 19
+            }
+                   ]
+               },
+               {
+                   "featureType": "water",
+                   "elementType": "geometry",
+                   "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 17
+            }
+                   ]
+               }
+           ]
+           map = new google.maps.Map(document.getElementById('map'), {
+          	center: {lat: 58.9342802, lng: 60},
+          	zoom: 2,
+               styles: styles,
+               disableDefaultUI: true
+          });
+           var locations = [
+               {title: 'Krasnoyarsk', location: {lat: 56.01839, lng: 92.86717}},
+               {title: 'Spb', location: {lat: 59.9342802, lng: 30.3350986}},
+           ];
+           for (var i = 0; i < locations.length; i++){
+               var position = locations[i].location;
+               var title = locations[i].title;
+
+               var marker = new google.maps.Marker({
+               position: position,
+               map: map,
+               animation: google.maps.Animation.BOUNCE,
+               title: title
+               });
+          
+           
+          markers.push(marker);
+           marker.addListener('click', toggleBounce);
+          function toggleBounce() { 
+               if (this.getAnimation() !== null) {
+               this.setAnimation(null);
+               } else {
+               this.setAnimation(google.maps.Animation.BOUNCE);
+               }
+               }
+           }
+       
+           
+          }
+          
+
           </script>
           <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5Ncosm7KrFjC4N1yWHqTKavjJu4Jucr4&amp;callback=initMap"></script>
         </div>
