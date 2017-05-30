@@ -42,26 +42,37 @@
         </div>
         <div class="section-services__options">
           <div class="section-services__options-title">Рассчитать стоимость сайта</div>
-          <ul class="section-services__options-list">
-            <li>Дизайн</li>
-            <li>Верстка</li>
-            <li>Управление</li>
-            <li>Дополнительно</li>
-          </ul>
-          <ul class="section-services__tab">
-            <li class="section-services__tab-item">
-              <div class="section-services__tab-title">Уникальный дизайн с нуля</div>
-              <div class="section-services__tab-descr">Разработка прототипа и дизайна макета всех страниц с сайта</div>
-            </li>
-            <li class="section-services__tab-item"> 
-              <div class="section-services__tab-title">Что-нибудь ещё</div>
-              <div class="section-services__tab-descr">Пояснение</div>
-            </li>
-            <li class="section-services__tab-item">
-              <div class="section-services__tab-title">У Вас есть готовый дизайн</div>
-              <div class="section-services__tab-descr">Может быть Вы уже сами нарисовали сайт? бла бла бла</div>
-            </li>
-          </ul>
+          <div class="section-services__tabs-wrapper">
+            <input class="section-services__options-radio" type="radio" name="tab" id="tab-1" checked="checked"/>
+            <label class="section-services__options-label" for="tab-1">Дизайн</label>
+            <input class="section-services__options-radio" type="radio" name="tab" id="tab-2"/>
+            <label class="section-services__options-label" for="tab-2">Верстка</label>
+            <input class="section-services__options-radio" type="radio" name="tab" id="tab-3"/>
+            <label class="section-services__options-label" for="tab-3">Управление</label>
+            <input class="section-services__options-radio" type="radio" name="tab" id="tab-4"/>
+            <label class="section-services__options-label" for="tab-4">Дополнительно</label>
+            <div class="section-services__tab-content">
+              <div class="section-services__tab tab-1">
+                <ul class="section-services__tab-list">
+                  <li class="section-services__tab-item">
+                    <div class="section-services__tab-title">Уникальный дизайн с нуля</div>
+                    <div class="section-services__tab-descr">Разработка прототипа и дизайна макета всех страниц сайта</div>
+                  </li>
+                  <li class="section-services__tab-item"> 
+                    <div class="section-services__tab-title">Что-нибудь ещё</div>
+                    <div class="section-services__tab-descr">Пояснение</div>
+                  </li>
+                  <li class="section-services__tab-item">
+                    <div class="section-services__tab-title">У Вас есть готовый дизайн</div>
+                    <div class="section-services__tab-descr">Может быть Вы уже сами нарисовали сайт? бла бла бла</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="section-services__tab tab-2">tab2</div>
+              <div class="section-services__tab tab-3">tab3</div>
+              <div class="section-services__tab tab-4">tab4</div>
+            </div>
+          </div>
           <div class="section-services__button">Заказать сайт</div>
         </div>
       </div>
