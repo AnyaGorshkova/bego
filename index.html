@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Home page</title>
+    <title>Главная страница</title>
     <meta content="" name="author">
     <meta content="" name="description">
     <meta content="" name="keywords">
@@ -24,37 +24,36 @@
   </head>
   <body>
     <div class="page">
-      <div class="order"><i class="fa fa-bars" aria-hidden="true"></i></div>
+      <div class="main-nav__button"><i class="fa fa-bars" aria-hidden="true"></i></div>
       <div class="form-order">
         <div class="form-order__close"><i class="fa fa-times" aria-hidden="true"></i></div>
         <div class="form-order__title">У вас есть интересный проект?</div>
-        <form>
-          <select nmae="project" title="Я хочу заказать...">
+        <form class="form">
+          <select class="form-order__select" nmae="project" title="Я хочу заказать...">
             <option value="landing">Просто сайт</option>
             <option value="shop">Интернет-магазин</option>
             <option value="help">Помогите с выбором</option>
           </select>
-          <label for="type-project"></label>
-          <input type="text" id="type-project" name="textfield" placeholder="Ваше имя">
-          <label for="type-project"></label>
-          <input type="text" id="type-project" name="textfield" placeholder="Номер телефона">
+          <label class="form-order__label" for="type-project"></label>
+          <input class="form-order__input" type="text" id="type-project" name="textfield" placeholder="Ваше имя">
+          <label class="form-order__label" for="type-project"></label>
+          <input class="form-order__input" type="text" id="type-project" name="textfield" placeholder="Номер телефона">
           <textarea class="form-order__descr" placeholder="Опишите Вашу идею"></textarea>
           <input class="form-order__submit" type="submit" value="Отправить">
         </form>
       </div>
-      <!--include ../common/_nav.pug-->
+      <nav class="main-nav">
+        <button class="main-nav__close" type="button"><i class="fa fa-times" aria-hidden="true"></i></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class="main-nav__link">Как мы работаем</a></li>
+          <li class="main-nav__item"><a class="main-nav__link">Что мы делаем</a></li>
+          <li class="main-nav__item"><a class="main-nav__link">Наши работы</a></li>
+          <li class="main-nav__item"><a class="main-nav__link">Контакты</a></li>
+        </ul>
+      </nav>
       <header class="main-header">
         <div class="main-nav__logo"></div>
         <div class="brief"><span>заполнить бриф</span></div>
-        <div class="mnu">
-          <div class="form-order__close"><i class="fa fa-times" aria-hidden="true"></i></div>
-          <ul class="mnu__list">
-            <li class="mnu__item"><a class="mnu__link">Как мы работаем</a></li>
-            <li class="mnu__item"><a class="mnu__link">Что мы делаем</a></li>
-            <li class="mnu__item"><a class="mnu__link">Наши работы</a></li>
-            <li class="mnu__item"><a class="mnu__link">Контакты</a></li>
-          </ul>
-        </div>
         <video class="main-header__video" autoplay loop>
           <source src="assets/img/video/Black_Keys.webm" type="video/webm">
           <source src="assets/img/video/Black_Keys.mp4" type="video/mp4">
@@ -70,7 +69,6 @@
           </div>
         </div>
       </header>
-      <!--section.red-section-->
       <div class="section__content">
         <div class="section__title">Что мы умеем</div>
         <div class="section__description"> Данный расчет не даёт точной оценки, но позволяет определить общий бюджет и нижнюю границу стоимости разработки сайта.</div>
@@ -122,27 +120,101 @@
                   <input class="section-services__options-radio" type="radio" name="tab" id="tab-3">
                   <label class="section-services__options-label" for="tab-3">Управление</label>
                   <input class="section-services__options-radio" type="radio" name="tab" id="tab-4">
-                  <label class="section-services__options-label" for="tab-4">Дополнительно</label>
+                  <label class="section-services__options-label" for="tab-4">Продвижение</label>
                   <div class="section-services__tab-content">
                     <div class="section-services__tab tab-1">
                       <ul class="section-services__tab-list">
                         <li class="section-services__tab-item">
-                          <div class="section-services__tab-title">Уникальный дизайн с нуля</div>
-                          <div class="section-services__tab-descr">Разработка прототипа и дизайна макета всех страниц сайта</div>
-                        </li>
-                        <li class="section-services__tab-item"> 
-                          <div class="section-services__tab-title">Что-нибудь ещё</div>
-                          <div class="section-services__tab-descr">Пояснение</div>
+                          <input class="section-services__radio" type="radio" id="design1" name="design" checked>
+                          <label class="section-services__label" for="design1"> 
+                            <div class="section-services__tab-title">Уникальный дизайн с нуля</div>
+                            <div class="section-services__tab-descr">Разработка прототипа и дизайна макета всех страниц сайта. 3 варианта дизайн-концепции</div>
+                          </label>
                         </li>
                         <li class="section-services__tab-item">
-                          <div class="section-services__tab-title">У Вас есть готовый дизайн</div>
-                          <div class="section-services__tab-descr">Может быть Вы уже сами нарисовали сайт? бла бла бла</div>
+                          <input class="section-services__radio" type="radio" id="design2" name="design">
+                          <label class="section-services__label" for="design2">
+                            <div class="section-services__tab-title">Использование шаблона</div>
+                            <div class="section-services__tab-descr">Пояснение</div>
+                          </label>
+                        </li>
+                        <li class="section-services__tab-item">
+                          <input class="section-services__radio" type="radio" id="design3" name="design">
+                          <label class="section-services__label" for="design3">
+                            <div class="section-services__tab-title">Без дизайна</div>
+                            <div class="section-services__tab-descr">Пояснение</div>
+                          </label>
                         </li>
                       </ul>
                     </div>
-                    <div class="section-services__tab tab-2">tab2</div>
-                    <div class="section-services__tab tab-3">tab3</div>
-                    <div class="section-services__tab tab-4">tab4</div>
+                    <div class="section-services__tab tab-2">
+                      <ul class="section-services__tab-list">
+                        <li class="section-services__tab-item">
+                          <input class="section-services__radio" type="radio" id="verst1" name="verst" checked>
+                          <label class="section-services__label" for="verst1">
+                            <div class="section-services__tab-title">Статическая верстка</div>
+                            <div class="section-services__tab-descr">пояснение</div>
+                          </label>
+                        </li>
+                        <li class="section-services__tab-item">
+                          <input class="section-services__radio" type="radio" id="verst2" name="verst">
+                          <label class="section-services__label" for="verst2">
+                            <div class="section-services__tab-title">Адаптивная верстка</div>
+                            <div class="section-services__tab-descr">Пояснение</div>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="section-services__tab tab-3">
+                      <ul class="section-services__tab-list">
+                        <li class="section-services__tab-item">
+                          <input class="section-services__radio" type="radio" id="cms1" name="cms" checked>
+                          <label class="section-services__label" for="cms1">
+                            <div class="section-services__tab-title">Использование готовой CMS</div>
+                            <div class="section-services__tab-descr">пояснение</div>
+                          </label>
+                        </li>
+                        <li class="section-services__tab-item">
+                          <input class="section-services__radio" type="radio" id="cms2" name="cms">
+                          <label class="section-services__label" for="cms2">
+                            <div class="section-services__tab-title">Без CMS</div>
+                            <div class="section-services__tab-descr">Пояснение</div>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="section-services__tab tab-4">
+                      <ul class="section-services__tab-list">
+                        <li class="section-services__tab-item">
+                          <input class="section-services__radio" type="checkbox" id="op1" name="op">
+                          <label class="section-services__label" for="op1">
+                            <div class="section-services__tab-title">Внутреняя seo-оптимизация</div>
+                            <div class="section-services__tab-descr">Разработка прототипа и дизайна макета всех страниц сайта</div>
+                          </label>
+                        </li>
+                        <li class="section-services__tab-item">
+                          <input class="section-services__radio" type="checkbox" id="op2" name="op">
+                          <label class="section-services__label" for="op2">
+                            <div class="section-services__tab-title">Установка счётчиков для сбора статистики</div>
+                            <div class="section-services__tab-descr">Коды Яндекс-метрики и Гугл Аналитикс</div>
+                          </label>
+                        </li>
+                        <li class="section-services__tab-item">
+                          <input class="section-services__radio" type="checkbox" id="op3" name="op">
+                          <label class="section-services__label" for="op3">
+                            <div class="section-services__tab-title">Мультилендинг</div>
+                            <div class="section-services__tab-descr">Подмена содержания под запрос посетителя</div>
+                          </label>
+                        </li>
+                        <li class="section-services__tab-item">
+                          <input class="section-services__radio" type="checkbox" id="op4" name="op">
+                          <label class="section-services__label" for="op4">
+                            <div class="section-services__tab-title">Продающий контент</div>
+                            <div class="section-services__tab-descr">Разработка идеального предложения, размещение информации о товаре, мероприятии или бренде, статей, акций, аудио и видео материалов</div>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
                 <div class="section-services__button">Заказать сайт</div>
